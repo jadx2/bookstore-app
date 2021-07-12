@@ -8,24 +8,30 @@ import App from './components/App';
 const initialState = {
   books: [
     {
-      id: Math.floor(Math.random() * 1000000),
+      id: Math.floor(Math.random() * 100000),
       title: 'My first book',
       category: 'Drama',
     },
     {
-      id: Math.floor(Math.random() * 1000000),
+      id: Math.floor(Math.random() * 100000),
       title: 'My second book',
       category: 'Comedy',
     },
     {
-      id: Math.floor(Math.random() * 1000000),
+      id: Math.floor(Math.random() * 100000),
       title: 'My third book',
       category: 'Suspense',
     },
   ],
 };
 
-const store = createStore(rootReducer, initialState);
+/* eslint-disable no-underscore-dangle */
+const store = createStore(
+  rootReducer,
+  initialState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
+/* eslint-enable */
 
 ReactDOM.render(
   <React.StrictMode>

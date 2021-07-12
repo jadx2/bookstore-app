@@ -7,7 +7,7 @@ const createBook = (book) => ({
 
 const removeBook = (book) => ({
   type: REMOVE_BOOK,
-  payload: book.id,
+  payload: book,
 });
 
 export { createBook, removeBook };

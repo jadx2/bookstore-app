@@ -1,15 +1,14 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actions/types';
 
-const books = (state = [], action) => {
+const booksReducer = (state = [], action) => {
+  let newState = [...state];
   switch (action.type) {
     case CREATE_BOOK:
-      return {
-        ...state,
-        books: [...state.books, action.payload],
-      };
+      newState = [...newState, action.payload];
+      return newState;
     case REMOVE_BOOK:
       return {
-        books: [...state.books.filter((book) => book.id !== action.payload)],
+        books: [...state.filter((book) => book.id !== action.payload)],
       };
 
     default:
@@ -17,4 +16,4 @@ const books = (state = [], action) => {
   }
 };
 
-export default books;
+export default booksReducer;

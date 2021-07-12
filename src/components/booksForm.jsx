@@ -20,7 +20,7 @@ class BooksForm extends Component {
     e.preventDefault();
     const { title, category } = this.state;
     const { createBook } = this.props;
-    createBook({ title, category });
+    createBook({ id: Math.floor(Math.random() * 100000), title, category });
     this.setState({ title: '', category: '' });
   };
 
@@ -78,8 +78,8 @@ class BooksForm extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  createBook: () => {
-    dispatch(createBook());
+  createBook: (book) => {
+    dispatch(createBook(book));
   },
 });
 
