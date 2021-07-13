@@ -1,7 +1,12 @@
 import { connect } from 'react-redux';
+<<<<<<< HEAD:src/components/booksList.jsx
 import PropTypes from 'prop-types';
 import Book from './book';
 import { removeBook } from '../actions/index';
+=======
+import PropType from 'prop-types';
+import Book from '../components/book';
+>>>>>>> milestone2:src/containers/booksList.jsx
 
 const BooksList = (props) => {
   const { books, removeBook } = props;

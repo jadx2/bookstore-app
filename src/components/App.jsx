@@ -1,5 +1,5 @@
-import BooksList from './booksList';
-import BooksForm from './booksForm';
+import BooksList from '../containers/booksList';
+import BooksForm from '../containers/booksForm';
 import './styles/App.css';
 
 const App = () => (
