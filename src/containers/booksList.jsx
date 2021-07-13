@@ -5,14 +5,16 @@ import CategoryFilter from '../components/categoryFilter';
 import Book from '../components/book';
 
 const BooksList = (props) => {
-  const { books, removeBook, filter } = props;
+  const {
+    books, removeBook, filter, changeFilter,
+  } = props;
 
   const handleRemoveBook = (book) => {
     removeBook(book);
   };
 
   const handleFilterChange = (e) => {
-    // console.log(e.target.value);
+    console.log(e.target.value);
     changeFilter(e.target.value);
   };
 
@@ -59,6 +61,7 @@ BooksList.propTypes = {
     }),
   ).isRequired,
   removeBook: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
 };
 

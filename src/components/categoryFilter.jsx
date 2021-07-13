@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const CategoryFilter = (props) => {
-  const { filter, handleFilterChange } = props;
+  const { filter, onChange } = props;
 
   const filters = [
     'All',
@@ -17,12 +17,8 @@ const CategoryFilter = (props) => {
   return (
     <div>
       <label htmlFor="filter">
-        <select
-          name="filter"
-          id="filter"
-          onChange={handleFilterChange}
-          value={filter}
-        >
+        Filter by:
+        <select name="filter" id="filter" onChange={onChange} value={filter}>
           {filters.map((filter) => (
             <option key={filter} value={filter}>
               {filter}
@@ -35,7 +31,7 @@ const CategoryFilter = (props) => {
 };
 
 CategoryFilter.propTypes = {
-  handleFilterChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
 };
 
