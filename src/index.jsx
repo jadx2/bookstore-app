@@ -10,19 +10,20 @@ const initialState = {
     {
       id: Math.floor(Math.random() * 100000),
       title: 'My first book',
-      category: 'Drama',
+      category: 'Horror',
     },
     {
       id: Math.floor(Math.random() * 100000),
       title: 'My second book',
-      category: 'Comedy',
+      category: 'Biography',
     },
     {
       id: Math.floor(Math.random() * 100000),
       title: 'My third book',
-      category: 'Suspense',
+      category: 'History',
     },
   ],
+  filter: 'All',
 };
 
 /* eslint-disable no-underscore-dangle */
