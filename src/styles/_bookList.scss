@@ -1,0 +1,39 @@
+@import 'variables';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: $white;
+  border-bottom: solid 0.125rem #e8e8e8;
+
+  .left-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1,
+    p {
+      margin-right: 2rem;
+    }
+
+    p {
+      font-family: Montserrat, sans-serif;
+      font-size: 0.813rem;
+      color: $black-two;
+      letter-spacing: 1.9px;
+    }
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 2.813rem;
+      border: 1px solid #e8e8e8;
+      border-radius: 50%;
+      padding: 10px;
+    }
+  }
+}

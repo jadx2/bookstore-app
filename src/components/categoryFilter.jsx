@@ -16,16 +16,18 @@ const CategoryFilter = (props) => {
 
   return (
     <div>
-      <label htmlFor="filter">
-        Filter by:
-        <select name="filter" id="filter" onChange={onChange} value={filter}>
-          {filters.map((filter) => (
-            <option key={filter} value={filter}>
-              {filter}
-            </option>
-          ))}
-        </select>
-      </label>
+      <select
+        className="filter"
+        name="filter"
+        onChange={onChange}
+        value={filter}
+      >
+        {filters.map((filter) => (
+          <option key={filter} value={filter}>
+            {filter.toUpperCase()}
+          </option>
+        ))}
+      </select>
     </div>
   );
 };

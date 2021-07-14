@@ -1,0 +1,148 @@
+@import 'variables';
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 75rem;
+  height: 10.625rem;
+  margin: 2.313rem 6.25rem 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: $white;
+
+  .book-info {
+    .book-category {
+      height: 1.125rem;
+      margin: 0 2.438rem 0 0;
+      opacity: 0.5;
+      font-family: Montserrat, sans-serif;
+      font-size: 0.875rem;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $black-two;
+    }
+
+    .book-title {
+      height: 1.813rem;
+      margin: 0.188rem 20.188rem 0 0;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 1.375rem;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.2px;
+      color: $black-two;
+    }
+
+    .book-author {
+      height: 1.188rem;
+      margin: 0.25rem 0 0;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #4386bf;
+    }
+  }
+
+  .buttons {
+    .btn-transparent {
+      border: none;
+      background-color: $white;
+      outline: none;
+      cursor: pointer;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #4386bf;
+    }
+
+    .divider-info {
+      width: 0.125rem;
+      height: 1.5rem;
+      margin: 0.75rem 1.063rem 0 0.938rem;
+      border: solid 1px #e8e8e8;
+    }
+  }
+
+  .book-progress {
+    display: flex;
+
+    .percentage {
+      display: flex;
+      align-items: center;
+
+      .progress-bar {
+        width: 4.25rem;
+        height: 4.25rem;
+        border-radius: 50%;
+        border-color: #e8e8e8 $medium-blue $medium-blue #e8e8e8;
+        border-style: solid;
+        border-width: 5px;
+        margin-right: 1.3rem;
+      }
+
+      .completed {
+        font-family: Montserrat, sans-serif;
+        font-size: 0.875rem;
+        color: $warm-grey;
+
+        .number {
+          font-size: 2rem;
+          color: $black-two;
+        }
+      }
+    }
+
+    .divider-progress {
+      width: 0.125rem;
+      height: 4.375rem;
+      margin: 1.125rem 3.688rem 0 4.938rem;
+      border: solid 1px #e8e8e8;
+    }
+
+    .chapter {
+      font-family: 'Roboto Slab', sans-serif;
+      font-weight: 300;
+      color: $black-two;
+
+      .current {
+        opacity: 0.5;
+        font-size: 0.813rem;
+      }
+
+      .chapter-number {
+        font-size: 1rem;
+        letter-spacing: -0.4px;
+      }
+    }
+
+    .btn {
+      border: none;
+      width: 11.5rem;
+      height: 2.063rem;
+      border-radius: 3px;
+      margin: 0.75rem 0 0.563rem 0;
+      padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 0.813rem;
+      letter-spacing: 0.5px;
+      text-align: center;
+      background-color: $azure;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}
