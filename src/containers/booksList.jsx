@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/categoryFilter';
 import Book from '../components/book';
-import Avatar from '../assets/images/avatar.png';
+import Avatar from '../assets/images/avatar.svg';
 
 const BooksList = (props) => {
   const {
