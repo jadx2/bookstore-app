@@ -2,6 +2,8 @@
 
 > This App was created for Magic-Books Inc. so they can have a front-end solution for their books organization and management. It was build using React and Redux.
 
+![screenshot](./src/assets/images/screenshot.png)
+
 ## Live Demo
 
 [Magic-Books Inc. Demo](https://jadx2-magic-books.herokuapp.com/)

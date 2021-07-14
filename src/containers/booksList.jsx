@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/categoryFilter';
 import Book from '../components/book';
+import Avatar from '../assets/images/avatar.svg';
 
 const BooksList = (props) => {
   const {
@@ -14,7 +15,6 @@ const BooksList = (props) => {
   };
 
   const handleFilterChange = (e) => {
-    console.log(e.target.value);
     changeFilter(e.target.value);
   };
 
@@ -24,25 +24,21 @@ const BooksList = (props) => {
 
   return (
     <>
-      <CategoryFilter onChange={handleFilterChange} filter={filter} />
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredBooks.map((book) => (
-            <Book
-              key={book.id}
-              book={book}
-              handleRemoveBook={handleRemoveBook}
-            />
-          ))}
-        </tbody>
-      </table>
+      <nav className="navbar">
+        <div className="left-navbar">
+          <h1>Bookstore CMS</h1>
+          <p>BOOKS</p>
+          <CategoryFilter onChange={handleFilterChange} filter={filter} />
+        </div>
+        <figure className="avatar">
+          <img src={Avatar} alt="Avatar" />
+        </figure>
+      </nav>
+      <div className="list-container">
+        {filteredBooks.map((book) => (
+          <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
+        ))}
+      </div>
     </>
   );
 };

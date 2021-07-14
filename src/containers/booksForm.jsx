@@ -8,6 +8,7 @@ class BooksForm extends Component {
     super(props);
     this.state = {
       title: '',
+      author: '',
       category: '',
     };
   }
@@ -18,14 +19,19 @@ class BooksForm extends Component {
 
   submitBook = (e) => {
     e.preventDefault();
-    const { title, category } = this.state;
+    const { title, author, category } = this.state;
     const { createBook } = this.props;
-    createBook({ id: Math.floor(Math.random() * 100000), title, category });
-    this.setState({ title: '', category: '' });
+    createBook({
+      id: Math.floor(Math.random() * 100000),
+      title,
+      author,
+      category,
+    });
+    this.setState({ title: '', author: '', category: '' });
   };
 
   render() {
-    const { title, category } = this.state;
+    const { title, author, category } = this.state;
 
     const categories = [
       'Action',
@@ -38,41 +44,51 @@ class BooksForm extends Component {
     ];
 
     return (
-      <form onSubmit={this.submitBook}>
-        <div>
-          <label htmlFor="title">
-            Title:
-            <input
-              type="text"
-              name="title"
-              id="title"
-              onChange={this.handleChange}
-              value={title}
-            />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="categories">
-            Categories:
-            <select
-              name="category"
-              id="categories"
-              onChange={this.handleChange}
-              value={category}
-            >
-              <option defaultValue>Choose a category</option>
-              {categories.map((categoryValue) => (
-                <option key={categoryValue} value={categoryValue}>
-                  {categoryValue}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-        <div>
-          <button type="submit">Add book</button>
-        </div>
-      </form>
+      <div className="new-book">
+        <h2 className="new-book-heading">ADD NEW BOOK</h2>
+        <form className="book-form" onSubmit={this.submitBook}>
+          <input
+            className="field input"
+            type="text"
+            required
+            name="title"
+            id="title"
+            onChange={this.handleChange}
+            value={title}
+            placeholder="Book title"
+          />
+          <input
+            className="field input"
+            type="text"
+            name="author"
+            required
+            id="author"
+            onChange={this.handleChange}
+            value={author}
+            placeholder="Book author"
+          />
+          <select
+            className="field select"
+            name="category"
+            required
+            id="categories"
+            onChange={this.handleChange}
+            value={category}
+          >
+            <option selected value="">
+              Category
+            </option>
+            {categories.map((categoryValue) => (
+              <option key={categoryValue} value={categoryValue}>
+                {categoryValue}
+              </option>
+            ))}
+          </select>
+          <button type="submit" className="btn">
+            ADD BOOK
+          </button>
+        </form>
+      </div>
     );
   }
 }

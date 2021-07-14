@@ -9,18 +9,21 @@ const initialState = {
   books: [
     {
       id: Math.floor(Math.random() * 100000),
-      title: 'My first book',
+      title: 'Ulises',
+      author: 'James Joyce',
+      category: 'History',
+    },
+    {
+      id: Math.floor(Math.random() * 100000),
+      title: 'Dracula',
+      author: 'Bram Stoker',
       category: 'Horror',
     },
     {
       id: Math.floor(Math.random() * 100000),
-      title: 'My second book',
-      category: 'Biography',
-    },
-    {
-      id: Math.floor(Math.random() * 100000),
-      title: 'My third book',
-      category: 'History',
+      title: 'Alice in Wonderland',
+      author: 'Lewis Carrol',
+      category: 'Kids',
     },
   ],
   filter: 'All',
