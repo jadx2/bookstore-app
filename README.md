@@ -16,10 +16,8 @@ This project was built using these technologies.
 - Prop-Types
 - Redux
 - React-Redux
-- HTML / CSS
+- HTML / SASS
 - NodeJS
-- Jest
-- Testing Libraries
 
 ### Getting Started
 
