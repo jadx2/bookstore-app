@@ -17,7 +17,6 @@ This project was built using these technologies.
 - Redux
 - React-Redux
 - HTML / SASS
-- NodeJS
 
 ### Getting Started
 
